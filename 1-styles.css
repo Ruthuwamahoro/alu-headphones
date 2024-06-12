@@ -204,6 +204,56 @@ html {
     font-weight: var(--font-weight-bold);
   }
   
+  @font-face {
+    font-family: "holberton_school-icon";
+    src: url("fonts/holberton_school-icon.eot?sq4eq4");
+    src: url("fonts/holberton_school-icon.eot?sq4eq4#iefix")
+        format("embedded-opentype"),
+      url("fonts/holberton_school-icon.ttf?sq4eq4") format("truetype"),
+      url("fonts/holberton_school-icon.woff?sq4eq4") format("woff"),
+      url("fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon")
+        format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="holberton_school-icon-"],
+  [class*=" holberton_school-icon-"] {
+    font-family: "holberton_school-icon" !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+  }
+  
+  .holberton_school-icon-ic_music:before {
+    content: "\e90d";
+  }
+  
+  .holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+  }
+  
+  .holberton_school-icon-ic_video:before {
+    content: "\e910";
+  }
+  .holberton_school-icon-ic_twitter:before {
+    content: "\e90f";
+  }
+  .holberton_school-icon-ic_facebook:before {
+    content: "\e908";
+  }
+  .holberton_school-icon-ic_instagram:before {
+    content: "\e90a";
+  }
+  
   .icon {
     color: var(--primary);
     font-size: 6rem;
@@ -383,8 +433,45 @@ html {
     box-shadow: 3px 15px 30px rgba(0, 0, 0, 0.74);
   }
   
-  /* Media Queries for Responsive designs =========================*/
-  /* MOBILE */
+  /* WHAT WE DO */
+  
+  .tasks {
+    max-block-size: 1920px;
+    max-inline-size: 100%;
+    text-align: center;
+  }
+  .tasks_container {
+    margin: 30px auto;
+  }
+  .tasks-title {
+    font-family: var(--font-family-bold);
+    font-size: var(--font-size-medium);
+    margin: 60px auto;
+    margin-block-end: 40px;
+  }
+  
+  .tasks-detail {
+    max-inline-size: 575px;
+    margin: auto;
+    line-height: 25px;
+    font-family: var(--font-family-base);
+  }
+  .tasks-column {
+    margin-block-end: 100px;
+    margin-top: 30px;
+    margin-inline: auto;
+    max-inline-size: 200px;
+  }
+  .column-title {
+    margin: 5px auto;
+    font-family: var(--font-family-title);
+  }
+  .column-detail {
+    font-family: var(--font-family-base);
+    font-weight: var(--font-weight-thin);
+    line-height: 25px;
+    max-inline-size: 200px;
+  }
   
   @media screen and (max-width: 480px) {
     .wrapper {
@@ -411,6 +498,21 @@ html {
       inline-size: 340px;
       margin: 20px auto;
       text-align: justify;
+    }
+    .tasks {
+      text-align: center;
+      margin: 20px auto;
+    }
+    .tasks-column {
+      margin: 40px auto;
+    }
+    .column-detail {
+      font-family: var(--font-family-base);
+      inline-size: 340px;
+      margin-inline: auto;
+    }
+    .tasks-detail {
+      inline-size: 340px;
     }
   }
   
@@ -454,6 +556,15 @@ html {
     .hero-3 {
       inline-size: 600px;
       margin: 10px auto;
+    }
+    .tasks_container {
+      display: grid;
+      column-gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .column-detail {
+      font-family: var(--font-family-base);
+      line-height: 20px;
     }
   }
   
